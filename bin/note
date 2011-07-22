@@ -1,1 +1,6 @@
-Notes.hello
+#!/usr/bin/env ruby
+
+require 'notes'
+include Notes
+
+hello

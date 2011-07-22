@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "notes"
   s.version     = Notes::VERSION
   s.authors     = ["Lyon"]
-  s.email       = ["lyon@delorum.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.email       = ["lyon@delorum.com", "clay@delorum.com"]
+  s.homepage    = "http://lyon.pagodabox.com"
+  s.summary     = %q{console based Note system}
+  s.description = %q{Type note -h for options}
 
   s.rubyforge_project = "notes"
 
