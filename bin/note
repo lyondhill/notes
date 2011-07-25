@@ -3,4 +3,24 @@
 require 'notes'
 include Notes
 
+Notes::hello
+
 hello
+
+puts ARGV.first
+
+case ARGV.first
+when "-c"
+  create(ARGV.last)
+when "-d"
+  delete(ARGV.last)
+when "-l"
+  list
+when "-e"
+  execute(ARGV.last)
+when "-h"
+  help
+else
+  help
+  
+end

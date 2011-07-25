@@ -5,7 +5,7 @@ require "notes/version"
 Gem::Specification.new do |s|
   s.name        = "notes"
   s.version     = Notes::VERSION
-  s.authors     = ["Lyon"]
+  s.authors     = ["Lyon", "Clay"]
   s.email       = ["lyon@delorum.com", "clay@delorum.com"]
   s.homepage    = "http://lyon.pagodabox.com"
   s.summary     = %q{console based Note system}
