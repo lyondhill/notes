@@ -3,12 +3,6 @@
 require 'notes'
 include Notes
 
-Notes::hello
-
-hello
-
-puts ARGV.first
-
 case ARGV.first
 when "-c"
   create(ARGV.last)
