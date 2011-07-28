@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'notes'
-include Notes
+require 'note'
+include Note
 
 case ARGV.first
 when "-c", "create"

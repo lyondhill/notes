@@ -1,6 +1,6 @@
-require "notes/version"
+require "note/version"
 
-module Notes
+module Note
   # Your code goes here...
 
   def check_file
