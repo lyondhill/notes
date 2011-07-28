@@ -7,11 +7,6 @@ module Notes
     `touch #{notes}` unless File.exist? notes
   end
 
-  def running_on_windows?
-    RUBY_PLATFORM =~ /mswin32|mingw32/
-  end
-
-
   def notes
     "#{ENV['HOME']}/.notes"
   end
@@ -22,7 +17,7 @@ module Notes
   end
 
   def save_hash(hash)
-    puts "SHOULD BE SAVING #{hash}"
+    File.open(notes, "w").write(hash.to_s)
   end
 
   def create(key)
@@ -34,8 +29,22 @@ module Notes
     save_hash hash
   end
   
-  def destroy(key)
-    
+  def delete(key)
+    hash = get_hash
+    hash.delete(key)
+    save_hash(hash)
+  end
+  
+  def execute(key)
+    exec(get_hash[key])
+  end
+  
+  def show(key)
+    if get_hash[key]
+      puts get_hash[key]
+    else
+      puts "Key does not exist."
+    end
   end
   
   def list
@@ -46,9 +55,12 @@ module Notes
 
   def help
     puts ""
-    puts "-l         Lists all note names"
-    puts "-c <name>  Create a new note"
-    puts "-d <name>  Delete a existing note"
+    puts "note -l        Lists all note names"
+    puts "note -c <key>  Create a new note"
+    puts "note -d <key>  Delete a existing note"
+    puts "note -e <key>  Try executing the key"
+    puts "note -h        Display Help"
+    puts "note <key>     Display the note for the given key"
     puts ""
   end
 

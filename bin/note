@@ -4,17 +4,20 @@ require 'notes'
 include Notes
 
 case ARGV.first
-when "-c"
+when "-c", "create"
   create(ARGV.last)
-when "-d"
+when "-d", "delete"
   delete(ARGV.last)
-when "-l"
+when "-l", "list"
   list
-when "-e"
+when "-e", "execute"
   execute(ARGV.last)
-when "-h"
+when "-h", "help"
   help
 else
+  if ARGV.count == 1
+    show ARGV.first
+  else
   help
-  
+  end
 end
