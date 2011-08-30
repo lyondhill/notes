@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'note'
+include Note
+
+execute(ARGV.last)
