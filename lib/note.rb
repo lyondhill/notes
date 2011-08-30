@@ -59,6 +59,7 @@ module Note
     puts "note -c <key>  Create a new note"
     puts "note -d <key>  Delete a existing note"
     puts "note -e <key>  Try executing the key"
+    puts "  - Execute has been shortcutted to 'sc' ie 'sc ping'"
     puts "note -h        Display Help"
     puts "note <key>     Display the note for the given key"
     puts ""
